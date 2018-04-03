@@ -1057,7 +1057,7 @@ function loop_status($lcd) {
 	$lcdpanel_width = get_lcdpanel_width();
 	$lcdpanel_height = get_lcdpanel_height();
 	if (empty($g['product_name'])) {
-		$g['product_name'] = "pfSense";
+		$g['product_name'] = "Kontrol";
 	}
 
 	$refresh_frequency = get_lcdpanel_refresh_frequency();
