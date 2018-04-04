@@ -699,7 +699,7 @@
 			<description>
 				<![CDATA[
 				Put your own custom options here, one per line. They'll be added to the configuration before authetication ACLS (if any).<br/>
-				<strong><span class="text-danger">Warning:</span> These need to be squid.conf native options, otherwise Squid will NOT work.</strong>
+				<strong><span class="text-danger">Warning:</span> These need to be squid.conf native options, otherwise Squid will NOT work.</strong> <br/>
 				<br/>
 				<strong>You can copy/paste the AUTH Config lines below</strong> <br/>
 				<strong>Uncomment and change the config items accordingly</strong> <br/>
