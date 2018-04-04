@@ -701,7 +701,7 @@ function squid_upgrade_config() {
 	if (isset($config['installedpackages']['squid']['config'][0]['patch_cp'])) {
 		if ($config['installedpackages']['squid']['config'][0]['patch_cp'] == "on") {
 			$cp_msg = "Patch Captive Portal feature was removed - see Bug #5594!";
-			$cp_msg .= "Double-check '/etc/inc/captiveportal.inc' contents for sanity! Get a sane copy of the file from pfSense GitHub repository if needed.";
+			$cp_msg .= "Double-check '/etc/inc/captiveportal.inc' contents for sanity.";
 			file_notice("squid", $cp_msg, "Packages", "");
 			log_error("[squid] {$cp_msg}");
 			unset($cp_msg);
@@ -711,7 +711,7 @@ function squid_upgrade_config() {
 
 	/* migrate reverse proxy settings */
 	squid_reverse_upgrade_config();
-	
+
 	/* unset broken antivirus settings */
 	squid_antivirus_upgrade_config();
 
@@ -786,10 +786,10 @@ function squid_validate_general($post, &$input_errors) {
 		$webgui_port = 443;
 	}
 	if (($post['transparent_proxy'] != 'on') && ($port == $webgui_port)) {
-		$input_errors[] = "You can not run Squid on the same port as the pfSense WebGUI";
+		$input_errors[] = "You can not run Squid on the same port as the Kontrol WebGUI";
 	}
 	unset($port, $webgui_port);
-	
+
 	if ($post['transparent_proxy'] == 'on') {
 		if (empty($post['transparent_active_interface'])) {
 			$input_errors[] = "You must select at least one interface under 'Transparent Proxy Interface(s)' when 'Transparent HTTP Proxy' is enabled.";
@@ -846,7 +846,7 @@ function squid_validate_general($post, &$input_errors) {
 		}
 	}
 	unset($host, $hosts);
-	
+
 	foreach (array('defined_ip_proxy_off_dest') as $hosts) {
 		foreach (explode(";", $post[$hosts]) as $host) {
 			$host = trim($host);
@@ -1586,7 +1586,7 @@ acl step3 at_step SslBump3
 
 EOD;
 	}
-	
+
 	$allowed_subnets = preg_replace("/\s+/"," ", sq_text_area_decode($settings['allowed_subnets']));
 	if (!empty($allowed_subnets)) {
 		$conf .= "acl allowed_subnets src $allowed_subnets\n";
