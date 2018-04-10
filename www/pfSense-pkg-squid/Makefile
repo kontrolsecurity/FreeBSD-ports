@@ -8,7 +8,7 @@ DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
 
 MAINTAINER=	coreteam@pfsense.org
-COMMENT=	pfSense package squid
+COMMENT=	package squid
 
 LICENSE=	APACHE20
 
