@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	3.4
-PORTREVISION=	1
+DISTVERSION=	3.6
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://mirrors.ibiblio.org/wine/source/3.x/ \
@@ -111,11 +110,6 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 
 .include <bsd.port.pre.mk>
 
-# PR224863: clang 6.0.0 crashes
-.if ${OPSYS} == FreeBSD && ${OSVERSION} == 1200056 && ${ARCH} == amd64
-USE_GCC=	yes
-.endif
-
 .if ${ARCH} == amd64
 # Wine is composed of three parts:
 #  - wine (aka this port) is the 32-bit component and runs 32-bit programs (on FreeBSD/i386)
@@ -175,11 +169,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/programs/winedbg/README ${STAGEDIR}${DOCSDIR}/README.winedbg
 	${INSTALL_DATA} ${WRKSRC}/tools/winedump/README ${STAGEDIR}${DOCSDIR}/README.winedump
 
-check-wine-devel-vs-wine-staging:
+check-wine-devel-vs-staging:
 	@${GREP} %%STAGING%% pkg-plist | while read f; do \
 	  f=`echo $$f | ${SED} -e 's/%%STAGING%%//'`; \
 	  if [ -f "$$STAGEDIR/$$PREFIX/$$f" ]; then \
-	    ${PRINTF} "%s no longer contigent on %%STAGING%%?\n" "$$f"; \
+	    ${PRINTF} "%s no longer contingent on %%STAGING%%?\n" "$$f"; \
 	  fi \
 	done
 

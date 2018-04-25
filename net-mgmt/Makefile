@@ -43,6 +43,7 @@
     SUBDIR += check_logfiles
     SUBDIR += check_multi
     SUBDIR += check_mysql_health
+    SUBDIR += check_ssl_cert
     SUBDIR += chillispot
     SUBDIR += choparp
     SUBDIR += cidr
@@ -267,6 +268,7 @@
     SUBDIR += p5-SNMP-Simple
     SUBDIR += p5-SNMP-Trapinfo
     SUBDIR += p5-SNMP-Util
+    SUBDIR += p5-RDR-Collector
     SUBDIR += p5-SNMP_Session
     SUBDIR += p5-Telnet-Cisco
     SUBDIR += p5-Tie-NetAddr-IP
@@ -307,11 +309,18 @@
     SUBDIR += py-dnsdiag
     SUBDIR += py-ipcalc
     SUBDIR += py-ipy
+    SUBDIR += py-junos-eznc
     SUBDIR += py-msrest
     SUBDIR += py-msrestazure
+    SUBDIR += py-napalm
+    SUBDIR += py-ncclient
     SUBDIR += py-pdagent
+    SUBDIR += py-pyIOSXR
+    SUBDIR += py-prometheus-client
     SUBDIR += py-pyang
+    SUBDIR += py-pyeapi
     SUBDIR += py-pynsca
+    SUBDIR += py-pynxos
     SUBDIR += py-pysmi
     SUBDIR += py-pyzabbix
     SUBDIR += py-snmp4
@@ -373,6 +382,7 @@
     SUBDIR += triton-guesttools
     SUBDIR += unbound_exporter
     SUBDIR += unifi-devel
+    SUBDIR += unifi-lts
     SUBDIR += unifi5
     SUBDIR += victorops-nagios
     SUBDIR += vidalia

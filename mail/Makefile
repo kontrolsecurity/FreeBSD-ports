@@ -98,6 +98,8 @@
     SUBDIR += dot-forward
     SUBDIR += dovecot
     SUBDIR += dovecot-pigeonhole
+    SUBDIR += dovecot-pigeonhole04
+    SUBDIR += dovecot22
     SUBDIR += drac
     SUBDIR += dracmail
     SUBDIR += dspam
@@ -549,6 +551,7 @@
     SUBDIR += py-pyspf
     SUBDIR += py-pyzmail
     SUBDIR += py-spambayes
+    SUBDIR += py-validate_email
     SUBDIR += py-zope.sendmail
     SUBDIR += pymsgauth
     SUBDIR += pysieved
@@ -583,6 +586,7 @@
     SUBDIR += queue-repair
     SUBDIR += rainloop
     SUBDIR += rainloop-community
+    SUBDIR += ratelimit-policyd
     SUBDIR += raysfilter
     SUBDIR += razor-agents
     SUBDIR += rbl-milter
