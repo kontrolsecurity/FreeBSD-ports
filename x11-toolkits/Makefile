@@ -193,6 +193,7 @@
     SUBDIR += pangox-compat
     SUBDIR += pangoxsl
     SUBDIR += phat
+    SUBDIR += plasma5-kdeplasma-addons
     SUBDIR += plib
     SUBDIR += pure-gtk
     SUBDIR += pure-tk
@@ -221,6 +222,7 @@
     SUBDIR += py-wxPython30
     SUBDIR += py-xlib
     SUBDIR += pypy-tkinter
+    SUBDIR += qml-box2d
     SUBDIR += qt4-declarative
     SUBDIR += qt4-gui
     SUBDIR += qt4pas
