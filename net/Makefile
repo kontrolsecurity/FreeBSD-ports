@@ -628,6 +628,7 @@
     SUBDIR += p5-MaxMind-DB-Reader
     SUBDIR += p5-MaxMind-DB-Writer
     SUBDIR += p5-Net
+    SUBDIR += p5-Net-ACME2
     SUBDIR += p5-Net-AMQP
     SUBDIR += p5-Net-AMQP-RabbitMQ
     SUBDIR += p5-Net-APNS
@@ -1043,6 +1044,7 @@
     SUBDIR += py-gspread
     SUBDIR += py-gspreadsheet
     SUBDIR += py-haproxy-log-analysis
+    SUBDIR += py-haproxyctl
     SUBDIR += py-httpstat
     SUBDIR += py-impacket
     SUBDIR += py-ipaddress
@@ -1227,6 +1229,7 @@
     SUBDIR += rubygem-fog-atmos
     SUBDIR += rubygem-fog-aws
     SUBDIR += rubygem-fog-aws1
+    SUBDIR += rubygem-fog-aws2
     SUBDIR += rubygem-fog-azure
     SUBDIR += rubygem-fog-brightbox
     SUBDIR += rubygem-fog-cloudatcost
