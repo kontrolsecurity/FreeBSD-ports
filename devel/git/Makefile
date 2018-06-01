@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	git
-DISTVERSION=	2.15.1
+DISTVERSION=	2.17.1
 CATEGORIES=	devel
 MASTER_SITES=	KERNEL_ORG/software/scm/git
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -22,10 +22,10 @@ CONFLICTS_INSTALL?=	git-gui-[0-9]* git-subversion-[0-9]* git-lite-[0-9]*
 USERS=		git_daemon
 GROUPS=		git_daemon
 
-SUB_FILES=	pkg-message
+SUB_FILES=	pkg-message gitweb.conf
 
 GNU_CONFIGURE=	yes
-USES=		autoreconf gmake shebangfix ssl tar:xz
+USES=		autoreconf gmake iconv shebangfix ssl tar:xz
 CPPFLAGS+=	-isystem${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ARGS+=	DEVELOPER_CFLAGS=
@@ -44,7 +44,8 @@ SHEBANG_FILES=	*.perl */*.perl */*/*.perl */*.pl */*/*.pl */*/*/*.pl \
 		contrib/remote-helpers/git-remote-hg \
 		contrib/credential/netrc/git-credential-netrc \
 		contrib/buildsystems/generate contrib/contacts/git-contacts \
-		contrib/svn-fe/svnrdump_sim.py
+		contrib/svn-fe/svnrdump_sim.py \
+		templates/hooks--fsmonitor-watchman.sample
 TEST_TARGET=	test
 
 CONFIGURE_ARGS=	--enable-pthreads=-pthread ac_cv_header_libcharset_h=no
@@ -73,6 +74,7 @@ PERL_RUN_DEPENDS=	p5-Error>=0:lang/p5-Error
 PERL_MAKE_ARGS_OFF=	NO_PERL=1
 
 GITWEB_IMPLIES=		PERL
+GITWEB_RUN_DEPENDS=	p5-CGI>=0:www/p5-CGI
 
 PCRE_LIB_DEPENDS=	libpcre.so:devel/pcre
 PCRE_CONFIGURE_WITH=	libpcre
@@ -153,7 +155,7 @@ post-patch:
 .for FILE in ${RMMAN7}
 	@${RM} ${WRKDIR}/man7/${FILE}
 .endfor
-	@${REINPLACE_CMD} -e 's|share/man/man3|man/man3|' ${WRKSRC}/perl/Makefile.PL
+	@${REINPLACE_CMD} -e "s,%%SITE_PERL%%,${SITE_PERL},g" ${WRKSRC}/Makefile
 
 post-patch-CONTRIB-on:
 	@${REINPLACE_CMD} -e "s,/usr/bin/perl,${PERL}," \
@@ -225,10 +227,15 @@ post-install-CONTRIB-on:
 post-install-CONTRIB-off:
 	# Install the contrib completions anyway
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d
-	@${INSTALL_SCRIPT} ${WRKSRC}/contrib/completion/git-completion.bash \
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/completion/git-completion.bash \
 		${STAGEDIR}${PREFIX}/etc/bash_completion.d/git.sh
 
 post-install-P4-on:
 	${INSTALL_SCRIPT} ${WRKSRC}/git-p4.py ${STAGEDIR}${PREFIX}/bin/
+
+post-install-GITWEB-on:
+	${MKDIR} ${STAGEDIR}${ETCDIR}
+	${INSTALL_DATA} ${WRKDIR}/gitweb.conf \
+		${STAGEDIR}${ETCDIR}/gitweb.conf.sample
 
 .include <bsd.port.mk>
