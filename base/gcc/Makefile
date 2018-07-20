@@ -2,6 +2,7 @@
 
 PORTNAME=	gcc
 PORTVERSION=	6.4.0
+PORTREVISION=	1
 CATEGORIES=	base
 MASTER_SITES=	GCC/releases/gcc-${DISTVERSION} \
 		http://www.mpfr.org/mpfr-3.1.6/:mpfr \
@@ -31,8 +32,7 @@ LICENSE_COMB=	multi
 GCC_TARGET=	${ARCH}-unknown-${OPSYS:tl}${OSREL}
 
 PREFIX=		/usr
-CONFIGURE_ENV=	gcc_gxx_include_dir="/usr/include/c++/v1" \
-		NM=/usr/bin/nm \
+CONFIGURE_ENV=	NM=/usr/bin/nm \
 		AS_FOR_TARGET=/usr/bin/as \
 		LD_FOR_TARGET=/usr/bin/ld \
 		NM_FOR_TARGET=/usr/bin/nm
@@ -61,6 +61,10 @@ ALL_TARGET?=	all-gcc
 INSTALL_TARGET?=	install-gcc
 
 .include <bsd.port.pre.mk>
+
+.if ${OSVERSION} >= 1200000
+CONFIGURE_ARGS+= --enable-initfini-array
+.endif
 
 .if ${ARCH:Mmips*}
 PLIST_SUB+=	MIPS=""

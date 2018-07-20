@@ -178,6 +178,7 @@
     SUBDIR += nedi
     SUBDIR += nefu
     SUBDIR += net-snmp
+    SUBDIR += netbox
     SUBDIR += netdata
     SUBDIR += netdisco
     SUBDIR += netdisco-mibs
@@ -374,7 +375,6 @@
     SUBDIR += statsite
     SUBDIR += subcalc
     SUBDIR += super_mediator
-    SUBDIR += sx
     SUBDIR += sysmon
     SUBDIR += tcpreplay
     SUBDIR += tcptrack

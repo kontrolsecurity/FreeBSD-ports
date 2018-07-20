@@ -32,6 +32,7 @@
     SUBDIR += crosextrafonts-carlito-ttf
     SUBDIR += cyberbit-ttfonts
     SUBDIR += cyr-rfx
+    SUBDIR += datalegreya
     SUBDIR += dejavu
     SUBDIR += dina
     SUBDIR += doulos
@@ -113,7 +114,7 @@
     SUBDIR += google-fonts
     SUBDIR += hack-font
     SUBDIR += hanazono-fonts-ttf
-    SUBDIR += hasklig
+    SUBDIR += Hasklig
     SUBDIR += inconsolata-lgc-ttf
     SUBDIR += inconsolata-ttf
     SUBDIR += indic-ttf

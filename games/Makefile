@@ -310,6 +310,7 @@
     SUBDIR += freedroidrpg
     SUBDIR += freeminer
     SUBDIR += freeminer-default
+    SUBDIR += freeorion
     SUBDIR += freera
     SUBDIR += freesweep
     SUBDIR += freesynd
@@ -674,6 +675,7 @@
     SUBDIR += mt_gtk_client
     SUBDIR += mtaserver
     SUBDIR += mudmagic
+    SUBDIR += multimc
     SUBDIR += mvdsv
     SUBDIR += nInvaders
     SUBDIR += nadar
