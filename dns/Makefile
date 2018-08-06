@@ -32,6 +32,7 @@
     SUBDIR += dns2blackhole
     SUBDIR += dns2tcp
     SUBDIR += dns_balance
+    SUBDIR += dnsblast
     SUBDIR += dnscap
     SUBDIR += dnscheck
     SUBDIR += dnscheckengine
@@ -200,6 +201,7 @@
     SUBDIR += py-pywdns
     SUBDIR += py-tld
     SUBDIR += py-tldextract
+    SUBDIR += qmdnsengine
     SUBDIR += radns
     SUBDIR += rbldnsd
     SUBDIR += rbllookup
