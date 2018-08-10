@@ -63,6 +63,7 @@
     SUBDIR += dnswalk
     SUBDIR += dnswall
     SUBDIR += doc
+    SUBDIR += doh-proxy
     SUBDIR += dq
     SUBDIR += drool
     SUBDIR += dsc
@@ -111,6 +112,7 @@
     SUBDIR += mdnsd
     SUBDIR += mydns
     SUBDIR += mydns-ng
+    SUBDIR += namesilo_ddns
     SUBDIR += noip
     SUBDIR += nsd
     SUBDIR += nslint
