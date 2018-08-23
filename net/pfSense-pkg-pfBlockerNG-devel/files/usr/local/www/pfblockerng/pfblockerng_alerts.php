@@ -34,7 +34,9 @@ pfb_global();
 // Alerts tab customizations
 $aglobal_array = array('pfbdenycnt' => 25, 'pfbpermitcnt' => 5, 'pfbmatchcnt' => 5, 'pfbdnscnt' => 5, 'pfbfilterlimitentries' => 100);
 $pfb['aglobal'] = &$config['installedpackages']['pfblockerngglobal'];
-
+if (!is_array($pfb['aglobal'])) {
+	$pfb['aglobal'] = array();
+}
 $alertrefresh	= $pfb['aglobal']['alertrefresh']	!= ''	? $pfb['aglobal']['alertrefresh']	: 'on';
 $pfbpageload	= $pfb['aglobal']['pfbpageload']	!= ''	? $pfb['aglobal']['pfbpageload']	: 'default';
 $pfbblockstat	= explode(',', $pfb['aglobal']['pfbblockstat']) ?: array();
@@ -121,6 +123,22 @@ if (!$alert_summary) {
 		if (empty($clists[$type]['options'])) {
 			$clists[$type]['options'][] = "Create new pfB_Whitelist_v{$vtype}";
 		}
+	}
+
+	if (!is_array($config['installedpackages']['pfblockerngipsettings']['config'])) {
+		$config['installedpackages']['pfblockerngipsettings']['config'] = array();
+	}
+
+	if (!is_array($config['installedpackages']['pfblockerngdnsblsettings']['config'])) {
+		$config['installedpackages']['pfblockerngdnsblsettings']['config'] = array();
+	}
+
+	if (!is_array($config['installedpackages']['pfblockerngipsettings']['config'][0])) {
+		$config['installedpackages']['pfblockerngipsettings']['config'][0] = array();
+	}
+
+	if (!is_array($config['installedpackages']['pfblockerngdnsblsettings']['config'][0])) {
+		$config['installedpackages']['pfblockerngdnsblsettings']['config'][0] = array();
 	}
 
 	foreach (array('ipsuppression', 'dnsblwhitelist', 'tldexclusion') as $key => $type) {
@@ -1011,7 +1029,7 @@ if ($alert_summary) {
 		if ($alert_view == 'dnsbl_stat') {
 			$alert_stats[$alert_view]['grouptotal'] = array();
 			$alert_stats[$alert_view]['groupblock'] = array();
-	
+
 			if (file_exists($pfb['dnsbl_info'])) {
 				$db_handle = pfb_open_sqlite(1, 'Report Stats');
 				if ($db_handle) {
@@ -1501,7 +1519,7 @@ if (!$alert_summary):
 					$alert = '<a class="fa fa-info icon-pointer icon-primary" target="_blank"'
 							. ' href="/pfblockerng/pfblockerng_threats.php?host='
 							. $entry . '" title="Click for Threat source IP Lookup for [ ' . $entry . ' ]"></a>';
-				} else { 
+				} else {
 					$unlock = '<i class="fa fa-unlock icon-primary text-primary" id="DNSBL_LCK|' . $entry . '|' . $type
 							. '" title="Re-Lock ' . $data[1] . ': [ ' . $entry . ' ] back into DNSBL? "></i>';
 
@@ -1765,7 +1783,7 @@ if ($pfb['dnsbl'] == 'on' && $type == 'DNSBL') {
 								. "&emsp;After a Reload any new blocked Domains can be Whitelisted at that time.";
 					}
 					else {
-						$supp_dom_txt = "Whitelist [ {$fields[2]} ]\n\n" 
+						$supp_dom_txt = "Whitelist [ {$fields[2]} ]\n\n"
 								. "Note:&emsp;This will immediately remove the blocked Domain\n"
 								. "&emsp;&emsp;&emsp;&nbsp;and associated CNAMES from DNSBL.\n"
 								. "&emsp;&emsp;&emsp;&nbsp;(CNAMES: Define the external DNS server in Alert settings.)\n\n"
@@ -1777,7 +1795,7 @@ if ($pfb['dnsbl'] == 'on' && $type == 'DNSBL') {
 					// Determine if Domain is blocked via TLD Blacklist
 					$pfb_found = FALSE;
 					if ($fields[5] != 'DNSBL_TLD') {
-			
+
 						// Remove Whitelist Icon for 'Unknown'
 						if ($fields[6] == 'Unknown') {
 							$supp_dom = '';
@@ -1870,7 +1888,7 @@ if ($pfb['dnsbl'] == 'on' && $type == 'DNSBL') {
 					$supp_dom_txt  = "Note:&emsp;The following Domain is in the TLD Exclusion customlist:\n\n"
 							. "TLD Exclusion:&emsp;[ {$wt_line} ]\n\n"
 							. "&#8226; TLD Exclusions require a Force Reload when a Domain is initially added.\n"
-							. "&#8226; To remove this Domain from the TLD Exclusion customlist, Click 'OK'"; 
+							. "&#8226; To remove this Domain from the TLD Exclusion customlist, Click 'OK'";
 
 					$supp_dom = '<i class="fa fa-trash-o no-confirm icon-pointer icon-primary" id="DNSBLWT|'
 							. 'delete_exclusion|' . $fields[7] . '" title="' . $supp_dom_txt . '"></i>';
@@ -1901,7 +1919,7 @@ if ($pfb['dnsbl'] == 'on' && $type == 'DNSBL') {
 							else {
 								$unlock_dom = '<i class="fa fa-lock icon-primary text-danger" id="DNSBL_ULCK|'
 										. $qdomain . '|' . $fields[5]
-										. '" title="Unlock Domain: [ ' . $qdomain . '] from DNSBL?' . $tnote . '" ></i>'; 
+										. '" title="Unlock Domain: [ ' . $qdomain . '] from DNSBL?' . $tnote . '" ></i>';
 							}
 						} else {
 							if ($pfb_found) {
@@ -2560,7 +2578,7 @@ elseif ($alert_summary):
 
 						<?php if ($stype[3]): ?>
 						<th style="width: 2%; text-align: center;">
-							<?=gettext(($stat_type == 'domain' || $stat_type == 'evald') ? 'Type' : 'GeoIP');?></th> 
+							<?=gettext(($stat_type == 'domain' || $stat_type == 'evald') ? 'Type' : 'GeoIP');?></th>
 						<?php endif; ?>
 
 						<th><small><?=$stype[1] . "&emsp;[ {$topcount} ]&emsp;" . $stype[2]?></th>
@@ -2715,7 +2733,7 @@ var pieChart_<?=$stat_type?> = new d3pie("pieChart_<?=$stat_type?>", {
 		"canvasHeight": 390,
 		"canvasWidth": 560,
 		"pieInnerRadius": 60,
-		"pieOuterRadius": "78%" 
+		"pieOuterRadius": "78%"
 	},
 	"data": {
 		"sortOrder": "value-asc",
@@ -2758,7 +2776,7 @@ var pieChart_<?=$stat_type?> = new d3pie("pieChart_<?=$stat_type?>", {
 	},
 	"labels": {
 		"outer": {
-			"pieDistance": 25 
+			"pieDistance": 25
 		},
 		"inner": {
 			"format": "percentage",
@@ -2796,7 +2814,7 @@ var pieChart_<?=$stat_type?> = new d3pie("pieChart_<?=$stat_type?>", {
 		"pullOutSegmentOnClick": {
 			"effect": "linear",
 			"speed": 400,
-			"size": 20 
+			"size": 20
 		},
 		highlightSegmentOnMouseover: true,
 		highlightLuminosity: -0.7
@@ -2824,7 +2842,7 @@ var pieChart_<?=$stat_type?> = new d3pie("pieChart_<?=$stat_type?>", {
 		},
 		"pieCenterOffset": {
 			"x": 0,
-			"y": 0 
+			"y": 0
 		},
 		colors: {
 			background: null,
