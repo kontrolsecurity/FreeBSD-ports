@@ -49,6 +49,8 @@
     SUBDIR += colt
     SUBDIR += coot
     SUBDIR += crf++
+    SUBDIR += dalton
+    SUBDIR += datawarrior
     SUBDIR += dcl
     SUBDIR += devisor
     SUBDIR += dft_tools
@@ -62,10 +64,12 @@
     SUBDIR += fastcap
     SUBDIR += fasthenry
     SUBDIR += fisicalab
+    SUBDIR += fleur
     SUBDIR += fsom
     SUBDIR += fvcom
     SUBDIR += fvcom-mpi
     SUBDIR += fvm
+    SUBDIR += gabedit
     SUBDIR += gchemutils
     SUBDIR += gdma
     SUBDIR += getdp
@@ -86,6 +90,7 @@
     SUBDIR += hypre
     SUBDIR += iboview
     SUBDIR += isaac-cfd
+    SUBDIR += jdftx
     SUBDIR += jstrack
     SUBDIR += kalzium
     SUBDIR += kalzium-kde4
@@ -99,6 +104,7 @@
     SUBDIR += libgeodecomp
     SUBDIR += libghemical
     SUBDIR += libint
+    SUBDIR += libint2
     SUBDIR += libkml
     SUBDIR += liblinear
     SUBDIR += liboglappth
@@ -108,6 +114,7 @@
     SUBDIR += libsvm-python
     SUBDIR += libxc
     SUBDIR += linsmith
+    SUBDIR += madness
     SUBDIR += massxpert
     SUBDIR += mbdyn
     SUBDIR += mcstas
@@ -125,11 +132,14 @@
     SUBDIR += mpb
     SUBDIR += mpqc
     SUBDIR += mpqc-mpich
+    SUBDIR += multiwfn
     SUBDIR += ncs
     SUBDIR += netcdf
     SUBDIR += netcdf-cxx
     SUBDIR += netcdf-fortran
     SUBDIR += nifticlib
+    SUBDIR += nwchem
+    SUBDIR += octopus
     SUBDIR += openbabel
     SUBDIR += openkim
     SUBDIR += openstructure
@@ -178,9 +188,11 @@
     SUBDIR += py-ScientificPython
     SUBDIR += py-SimpleSpectral
     SUBDIR += py-abipy
+    SUBDIR += py-ase
     SUBDIR += py-cdo
     SUBDIR += py-coards
     SUBDIR += py-dlib
+    SUBDIR += py-gpaw
     SUBDIR += py-gsd
     SUBDIR += py-h5py
     SUBDIR += py-hcluster
@@ -216,6 +228,7 @@
     SUBDIR += pybrain
     SUBDIR += pycdf
     SUBDIR += pynn
+    SUBDIR += qbox
     SUBDIR += qcl
     SUBDIR += qmcpack
     SUBDIR += qtresistors
@@ -231,6 +244,7 @@
     SUBDIR += rubygem-rgeo-shapefile
     SUBDIR += rubygem-ruby-dcl
     SUBDIR += rubygem-ruby-netcdf
+    SUBDIR += siesta
     SUBDIR += sigrok-cli
     SUBDIR += sigrok-firmware
     SUBDIR += sigrok-firmware-fx2lafw
@@ -243,12 +257,14 @@
     SUBDIR += step-kde4
     SUBDIR += svmlight
     SUBDIR += szip
+    SUBDIR += teem
     SUBDIR += tfel
     SUBDIR += triqs
     SUBDIR += udunits
     SUBDIR += v_sim
     SUBDIR += vmd
     SUBDIR += voro++
+    SUBDIR += wannier90
     SUBDIR += xcrysden
     SUBDIR += xdrawchem
     SUBDIR += xfce4-equake-plugin

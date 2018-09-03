@@ -72,6 +72,7 @@
     SUBDIR += R-cran-tibble
     SUBDIR += R-cran-tidyr
     SUBDIR += R-cran-tidyselect
+    SUBDIR += R-cran-vcd
     SUBDIR += R-cran-withr
     SUBDIR += RStudio
     SUBDIR += SpecTcl
@@ -483,6 +484,7 @@
     SUBDIR += dyncall
     SUBDIR += e00compr
     SUBDIR += e2fsprogs-libss
+    SUBDIR += eastl
     SUBDIR += easygit
     SUBDIR += easyloggingpp
     SUBDIR += eblob
@@ -799,6 +801,7 @@
     SUBDIR += global
     SUBDIR += glog
     SUBDIR += glrparser
+    SUBDIR += glslang
     SUBDIR += glui
     SUBDIR += gmake
     SUBDIR += gnatcoll
@@ -864,7 +867,6 @@
     SUBDIR += gperf
     SUBDIR += gpm
     SUBDIR += gprbuild
-    SUBDIR += gps
     SUBDIR += gpsim
     SUBDIR += gputils
     SUBDIR += gradle
@@ -1216,6 +1218,7 @@
     SUBDIR += i386-gcc
     SUBDIR += i386-xtoolchain-gcc
     SUBDIR += ice
+    SUBDIR += ice37
     SUBDIR += icestorm
     SUBDIR += icmake
     SUBDIR += icontheme
@@ -1341,6 +1344,7 @@
     SUBDIR += lattice-ice40-examples-hx1k
     SUBDIR += lattice-ice40-examples-hx8k
     SUBDIR += lattice-ice40-tools
+    SUBDIR += lazygit
     SUBDIR += lcov
     SUBDIR += leaktracer
     SUBDIR += leatherman
@@ -1763,7 +1767,6 @@
     SUBDIR += mercurialeclipse
     SUBDIR += mergify
     SUBDIR += meson
-    SUBDIR += mico
     SUBDIR += mime
     SUBDIR += mimir
     SUBDIR += mingw32-bin-msvcrt
@@ -1883,8 +1886,6 @@
     SUBDIR += omniORB-4.1
     SUBDIR += omnisharp-server
     SUBDIR += oniguruma
-    SUBDIR += onscripter
-    SUBDIR += onscripter-1byte
     SUBDIR += oozie
     SUBDIR += open-beagle
     SUBDIR += open-usp-tukubai
@@ -4105,6 +4106,7 @@
     SUBDIR += php-Psr_Log
     SUBDIR += php-composer
     SUBDIR += php-geshi
+    SUBDIR += php-ice37
     SUBDIR += php-jq
     SUBDIR += php-libawl
     SUBDIR += php-maxminddb
@@ -4181,7 +4183,6 @@
     SUBDIR += pmd
     SUBDIR += poco
     SUBDIR += poco-ssl
-    SUBDIR += ponscripter-sekai
     SUBDIR += popt
     SUBDIR += poslib
     SUBDIR += powerpc64-binutils
@@ -4344,6 +4345,7 @@
     SUBDIR += py-argh
     SUBDIR += py-argparse
     SUBDIR += py-args
+    SUBDIR += py-arpeggio
     SUBDIR += py-arrow
     SUBDIR += py-asn1crypto
     SUBDIR += py-aspects
@@ -4613,6 +4615,7 @@
     SUBDIR += py-hypothesis
     SUBDIR += py-icalendar
     SUBDIR += py-ice
+    SUBDIR += py-ice37
     SUBDIR += py-imgkit
     SUBDIR += py-incremental
     SUBDIR += py-inflect
@@ -4697,6 +4700,7 @@
     SUBDIR += py-libvirt
     SUBDIR += py-libzfs
     SUBDIR += py-linecache2
+    SUBDIR += py-lineedit
     SUBDIR += py-llfuse
     SUBDIR += py-llvmcpy
     SUBDIR += py-llvmlite
@@ -4808,6 +4812,7 @@
     SUBDIR += py-palm
     SUBDIR += py-parallax
     SUBDIR += py-parsedatetime
+    SUBDIR += py-parver
     SUBDIR += py-patch
     SUBDIR += py-path.py
     SUBDIR += py-pathlib
@@ -4840,6 +4845,7 @@
     SUBDIR += py-ply
     SUBDIR += py-podcastparser
     SUBDIR += py-polib
+    SUBDIR += py-pooch
     SUBDIR += py-positional
     SUBDIR += py-posix_ipc
     SUBDIR += py-pp
@@ -4851,6 +4857,7 @@
     SUBDIR += py-protobuf
     SUBDIR += py-protocols
     SUBDIR += py-ptable
+    SUBDIR += py-ptpython
     SUBDIR += py-ptrace
     SUBDIR += py-ptvsd
     SUBDIR += py-pudb
@@ -5290,6 +5297,7 @@
     SUBDIR += pydbus-common
     SUBDIR += pygobject3-common
     SUBDIR += pylint
+    SUBDIR += pylint1
     SUBDIR += pymacs
     SUBDIR += pyobfuscate
     SUBDIR += pypersrc
@@ -5391,8 +5399,6 @@
     SUBDIR += regexxer
     SUBDIR += relx
     SUBDIR += remake
-    SUBDIR += renpy
-    SUBDIR += renpy6
     SUBDIR += replay
     SUBDIR += replxx
     SUBDIR += resolv_wrapper
@@ -5401,7 +5407,6 @@
     SUBDIR += riscv64-gcc
     SUBDIR += riscv64-xtoolchain-gcc
     SUBDIR += rlog
-    SUBDIR += rlvm
     SUBDIR += rlwrap
     SUBDIR += roboctl
     SUBDIR += robodoc
@@ -5411,6 +5416,7 @@
     SUBDIR += rpm-spec-mode.el
     SUBDIR += rsvndump
     SUBDIR += rth
+    SUBDIR += rtichoke
     SUBDIR += ruby-bsearch
     SUBDIR += ruby-build
     SUBDIR += ruby-gems
@@ -5997,6 +6003,7 @@
     SUBDIR += rubygem-streetaddress
     SUBDIR += rubygem-stringex
     SUBDIR += rubygem-strings
+    SUBDIR += rubygem-strings-ansi
     SUBDIR += rubygem-strong_migrations
     SUBDIR += rubygem-structured_warnings
     SUBDIR += rubygem-stud
@@ -6157,6 +6164,7 @@
     SUBDIR += spdlog
     SUBDIR += spice-protocol
     SUBDIR += spin
+    SUBDIR += spirv-tools
     SUBDIR += splint
     SUBDIR += srecord
     SUBDIR += st
@@ -6280,6 +6288,9 @@
     SUBDIR += violet
     SUBDIR += visualparadigm
     SUBDIR += vstr
+    SUBDIR += vulkan-headers
+    SUBDIR += vulkan-tools
+    SUBDIR += vulkan-validation-layers
     SUBDIR += vxlog
     SUBDIR += wand-libconfig
     SUBDIR += wandio
