@@ -423,7 +423,7 @@
 				<![CDATA[
 				Select Certificate Authority to use when SSL interception is enabled.
 				<div class="infoblock">
-				To create a CA on pfSense, go to <a href="system_camanager.php" target="_blank">System &gt; Cert Manager</a>.<br/>
+				To create a CA on Kontrol, go to <a href="system_camanager.php" target="_blank">System &gt; Cert Manager</a>.<br/>
 				<strong><span class="text-danger">Important:</span></strong> Install the CA certificate as a Trusted Root CA on each computer you want to filter SSL on to avoid SSL error on each connection.
 				</div>
 				]]>
