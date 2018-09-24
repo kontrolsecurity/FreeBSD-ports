@@ -363,6 +363,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # CXXFLAGS_${ARCH}
 #				 Append the cxxflags to CXXFLAGS only on the specified architecture
 ##
+# LDFLAGS_${ARCH} Append the ldflags to LDFLAGS only on the specified architecture
 # USE_SDL		- If set, this port uses the sdl libraries.
 #				  See bsd.sdl.mk for more information.
 ##
@@ -528,7 +529,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  Installs all directories and files from ${WRKSRC}/doc
 #				  to ${DOCSDIR} except sed(1) backup files.
 #
-# MANPREFIX		- The directory prefix for ${MAN<sect>} and ${MLINKS}.
+# MANPREFIX		- The directory prefix for manual pages.
 #				  Default: ${PREFIX}
 # MAN<sect>PREFIX
 #				- If manual pages of some sections install in different
@@ -2045,10 +2046,10 @@ CFLAGS+=       -fno-strict-aliasing
 ${lang}FLAGS:=	${${lang}FLAGS:N-std=*} -std=${USE_${lang}STD}
 .endif
 
-.if defined(${lang}FLAGS_${ARCH})
 ${lang}FLAGS+=	${${lang}FLAGS_${ARCH}}
-.endif
 .endfor
+
+LDFLAGS+=	${LDFLAGS_${ARCH}}
 
 # Multiple make jobs support
 .if defined(DISABLE_MAKE_JOBS) || defined(MAKE_JOBS_UNSAFE)
