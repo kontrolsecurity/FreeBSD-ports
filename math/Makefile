@@ -112,6 +112,7 @@
     SUBDIR += acalc
     SUBDIR += add
     SUBDIR += adept
+    SUBDIR += adol-c
     SUBDIR += algae
     SUBDIR += alglib
     SUBDIR += algotutor
@@ -174,6 +175,7 @@
     SUBDIR += cryptominisat
     SUBDIR += cvc3
     SUBDIR += cvc4
+    SUBDIR += deal.ii
     SUBDIR += diehard
     SUBDIR += dieharder
     SUBDIR += djbfft
@@ -356,13 +358,13 @@
     SUBDIR += mppp
     SUBDIR += mprime
     SUBDIR += msieve
-    SUBDIR += mtl
     SUBDIR += mtrxmath
     SUBDIR += multichoose
     SUBDIR += mumps
     SUBDIR += mumps-edf
     SUBDIR += mumps-mpich
     SUBDIR += muparser
+    SUBDIR += nanoflann
     SUBDIR += naturalmath
     SUBDIR += nauty
     SUBDIR += ndiff
