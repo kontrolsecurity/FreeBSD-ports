@@ -34,6 +34,7 @@
     SUBDIR += asterisk-g72x
     SUBDIR += asterisk13
     SUBDIR += asterisk15
+    SUBDIR += asterisk16
     SUBDIR += avahi
     SUBDIR += avahi-app
     SUBDIR += avahi-autoipd
@@ -147,6 +148,7 @@
     SUBDIR += fiche
     SUBDIR += file2pcap
     SUBDIR += findmtu
+    SUBDIR += flent
     SUBDIR += flower
     SUBDIR += flowgrep
     SUBDIR += fonulator
@@ -166,6 +168,7 @@
     SUBDIR += frr3
     SUBDIR += frr4
     SUBDIR += frr5
+    SUBDIR += frr6
     SUBDIR += fspclient
     SUBDIR += fspd
     SUBDIR += fsplib
@@ -342,7 +345,6 @@
     SUBDIR += kmbox
     SUBDIR += kmime
     SUBDIR += knc
-    SUBDIR += knemo-kde4
     SUBDIR += kontactinterface
     SUBDIR += kpimtextedit
     SUBDIR += krdc
@@ -1022,7 +1024,6 @@
     SUBDIR += pktanon
     SUBDIR += pload
     SUBDIR += plugdaemon
-    SUBDIR += pmf
     SUBDIR += polyorb
     SUBDIR += poptop
     SUBDIR += portfwd
@@ -1183,6 +1184,7 @@
     SUBDIR += queso
     SUBDIR += quiterss
     SUBDIR += quoted
+    SUBDIR += rabbiteer
     SUBDIR += rabbitmq
     SUBDIR += rabbitmq-c
     SUBDIR += rabbitmq-c-devel
@@ -1423,7 +1425,6 @@
     SUBDIR += ssmping
     SUBDIR += ssspl
     SUBDIR += ssvnc
-    SUBDIR += stf-6rd-kmod
     SUBDIR += stone
     SUBDIR += stund
     SUBDIR += subnetcalc
@@ -1507,7 +1508,6 @@
     SUBDIR += uriparser
     SUBDIR += urlendec
     SUBDIR += usbredir
-    SUBDIR += userfw
     SUBDIR += utftpd
     SUBDIR += vblade
     SUBDIR += vde

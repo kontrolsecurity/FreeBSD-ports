@@ -258,8 +258,6 @@
     SUBDIR += hs-cookie
     SUBDIR += hs-css-text
     SUBDIR += hs-fastcgi
-    SUBDIR += hs-gitit
-    SUBDIR += hs-happstack
     SUBDIR += hs-happstack-server
     SUBDIR += hs-heist
     SUBDIR += hs-hjsmin
@@ -529,6 +527,7 @@
     SUBDIR += node
     SUBDIR += node6
     SUBDIR += node8
+    SUBDIR += node10
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -2002,7 +2001,6 @@
     SUBDIR += rubygem-deckar01-task_list
     SUBDIR += rubygem-domainatrix
     SUBDIR += rubygem-dropzonejs-rails
-    SUBDIR += rubygem-dropzonejs-rails07
     SUBDIR += rubygem-em-http-request
     SUBDIR += rubygem-em-socksify
     SUBDIR += rubygem-em-twitter
@@ -2415,7 +2413,6 @@
     SUBDIR += twiki-WysiwygPlugin
     SUBDIR += twill
     SUBDIR += twms
-    SUBDIR += typo3-7
     SUBDIR += typo3-8
     SUBDIR += uchiwa
     SUBDIR += udmsearch

@@ -3593,7 +3593,6 @@ misc/gpt||2012-08-20|Has expired: was a dependency for net/globus4, which was re
 www/xxxterm|www/xombrero|2012-08-20|Project renamed
 www/cakephp2|www/cakephp21|2012-08-21|Moved to match port version
 databases/libudbc||2012-08-21|Has expired: Does not fetch and no vendor support anymore
-net/asterisk16||2012-08-22|Unsupported upstream, please use net/asterisk instead
 net/asterisk16-addons||2012-08-22|Unsupported upstream, now part of net/asterisk
 databases/edb||2012-08-26|Has expired: Deprecated by enlightenment.org team
 databases/php5-rrdtool||2012-08-26|Has expired: deprecated via upstream please use databases/pecl-rrd
@@ -4641,7 +4640,6 @@ multimedia/ksubeditor||2013-07-26|Has expired: Depends on Qt 3.x
 multimedia/mandvd||2013-07-26|Has expired: Depends on Qt 3.x
 multimedia/noatun-plugins||2013-07-26|Has expired: Depends on Qt 3.x
 multimedia/qdvdauthor||2013-07-26|Has expired: Depends on Qt 3.x
-multimedia/subtitlecomposer||2013-07-26|Has expired: Depends on Qt 3.x
 multimedia/transkode||2013-07-26|Has expired: Depends on Qt 3.x
 multimedia/xine_artsplugin||2013-07-26|Has expired: Depends on Qt 3.x
 net/cphone||2013-07-26|Has expired: Depends on Qt 3.x
@@ -10583,3 +10581,36 @@ audio/msbcg729||2018-10-18|Obsolete: net/mediastreamer has built-in G.729 codec
 audio/msilbc|multimedia/mswebrtc|2018-10-18|Deprecated upstream
 multimedia/msx264|multimedia/msopenh264|2018-10-18|Deprecated upstream
 games/openastromenace|games/astromenace|2018-10-20|Name correctly after upstream
+devel/hs-enumerator||2018-10-23|Has expired: Doesn't build with recent GHC version
+net-im/hs-haskell-xmpp||2018-10-23|Has expired: Doesn't build with recent GHC version
+security/hs-certificate||2018-10-23|Has expired: Doesn't build with recent GHC version
+textproc/hs-attoparsec-enumerator||2018-10-23|Has expired: Doesn't build with recent GHC version
+textproc/hs-HaXml||2018-10-23|Has expired: Doesn't build with recent GHC version
+www/hs-happstack||2018-10-23|Has expired: Doesn't build with recent GHC version
+x11-toolkits/hs-wxc||2018-10-23|Has expired: Doesn't build with recent GHC version
+x11-toolkits/hs-wx||2018-10-23|Has expired: Doesn't build with recent GHC version
+archivers/hs-zlib-enum||2018-10-23|Has expired: Doesn't build with recent GHC version
+x11-toolkits/hs-wxcore||2018-10-23|Has expired: Doesn't build with recent GHC version
+devel/hs-TypeCompose||2018-10-23|Has expired: Doesn't build with recent GHC version
+devel/hs-PSQueue||2018-10-23|Has expired: Doesn't build with recent GHC version
+devel/hs-blaze-builder-enumerator||2018-10-23|Has expired: Doesn't build with recent GHC version
+www/hs-gitit||2018-10-23|Has expired: Doesn't build with newest packages
+cad/kicad-library||2018-10-25|Has expired: KiCad has been upgraded to 5.0.0
+devel/linux-kernel||2018-10-29|Has expired: no longer useful
+audio/py-musicbrainz2||2018-10-29|Has expired: Musicbrainz Web Service 1.0 support ended 2018-08-01
+games/bloboats||2018-11-01|Has expired: Upstream gone, FreeBSD 10 only
+net/stf-6rd-kmod||2018-11-01|Has expired: Does not build on FreeBSD 11+
+net/pmf||2018-11-01|Has expired: Does not build on FreeBSD 11+
+net/knemo-kde4||2018-11-01|Has expired: KDE4 is EOL upstream, FreeBSD 10 only-port
+net/userfw||2018-11-01|Has expired: Does not build on FreeBSD 11+
+sysutils/qjail4|sysutils/qjail|2018-11-01|Has expired: Only for FreeBSD 10.x , use sysutis/qjail instead
+sysutils/bsdmoted||2018-11-01|Has expired: does not build on FreeBSD 11+
+sysutils/scprotect||2018-11-01|Has expired: Does not build on FreeBSD 11+
+www/typo3-7|www/typo3-8|2018-11-01|Has expired: Support will end in October 2018, please update to either www/typo3-8 or www/typo3-9
+devel/memleax||2018-11-01|Has expired: does not actually detect leaks
+emulators/virtio-kmod||2018-11-01|Has expired: Does not build on FreeBSD 10+
+games/traindirector||2018-11-01|Has expired: Does not build on FreeBSD 11+
+devel/rubygem-peek-sidekiq||2018-11-01|Obsolete by www/gitlab-ce 11.4.x upgrade
+devel/rubygem-sidekiq-limit_fetch||2018-11-01|Obsolete by www/gitlab-ce 11.4.x upgrade
+textproc/rubygem-github-markup16|textproc/rubygem-github-markup|2018-11-01|Obsolete by www/gitlab-ce 11.4.x upgrade, please use textproc/rubygem-github-markup
+www/rubygem-dropzonejs-rails07|www/rubygem-dropzonejs-rails|2018-11-01|Obsolete by www/gitlab-ce 11.4.x upgrade, please use www/rubygem-dropzonejs-rails
