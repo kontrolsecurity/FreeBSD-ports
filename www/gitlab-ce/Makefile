@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-ce
-PORTVERSION=	11.7.3
+PORTVERSION=	11.7.4
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -168,7 +168,7 @@ MY_DEPENDS=	git>=2.16.2:devel/git \
 	rubygem-gettext_i18n_rails>=1.8.0:devel/rubygem-gettext_i18n_rails \
 	rubygem-gettext_i18n_rails_js-rails50>=1.3:devel/rubygem-gettext_i18n_rails_js-rails50 \
 	rubygem-gettext>=3.2.2:devel/rubygem-gettext \
-	rubygem-batch-loader>=1.2.2:devel/rubygem-batch-loader \
+	rubygem-batch-loader12>=1.2.2:devel/rubygem-batch-loader12 \
 	rubygem-peek-rails50>=1.0.1:devel/rubygem-peek-rails50 \
 	rubygem-peek-gc-rails50>=0.0.2:devel/rubygem-peek-gc-rails50 \
 	rubygem-peek-rblineprof-rails50>=0.2.0:devel/rubygem-peek-rblineprof-rails50 \
@@ -221,7 +221,7 @@ USE_RC_SUBR=	gitlab
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 # Find the here: https://gitlab.com/gitlab-org/gitlab-ce/tags
-GL_COMMIT=	3424476b4c9f17c11b969ab00e9be80f8c635c02
+GL_COMMIT=	1b59453d73db6655b0a3c3d723dace9e8f8994df
 
 USERS=	git
 GROUPS=	git
